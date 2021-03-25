@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+    
+    body {
+      height: 100%vh;
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 99%);
+    }
+
+    .bg-dark {
+    background: #c84332 !important;
+    }
+    h1 {
+    text-align: center;
+    margin-top: 3rem;
+    color:white;
+    }
+    </style>
+
+
+    
+    <script>
+
+      let playersNameList = [];
+
+      function addplayername() {
+        playerList = document.getElementById('playersname').value;
+        items.push(boxvalue);  
+        console.log(playerList);
+      }
+
+const players = [
+  { Name: 'B', KD: 9 },
+  { Name: 'H', KD: 3 },
+  { Name: 'E', KD: 6 },
+  { Name: 'D', KD: 7 },
+  { Name: 'A', KD: 10 },
+  { Name: 'C', KD: 8 },
+  { Name: 'J', KD: 1 },
+  { Name: 'F', KD: 5 },
+  { Name: 'I', KD: 2 },
+  { Name: 'G', KD: 4 },
+]
+const sorted = players.sort((a, b) => a.KD - b.KD)
+const teamA = [sorted.pop()] // #1 player
+const teamB = [sorted.pop()] // #2 player
+const teamC = [sorted.pop()] // #3 player
+const teamD = [sorted.pop()] // #4 player
+const pushIfDefined = (arr, val) => val && arr.push(val)
+
+while(sorted.length) {
+  pushIfDefined(teamD, sorted.pop())
+  pushIfDefined(teamC, sorted.pop())
+  pushIfDefined(teamB, sorted.pop())
+  pushIfDefined(teamA, sorted.pop())
+}
+console.log("Team A: ", teamA)
+console.log("Team B: ", teamB)
+console.log("Team C: ", teamC)
+console.log("Team D: ", teamD)
+
+
+    </script>
+    <title>STRIVE TEAM GENERATOR</title>
+  </head>
+
+ 
+
+  </style>
+  <body>
+    <nav class="navbar navbar-light bg-dark">
+      <a class="navbar-brand"> <img src="./Assets/teamgenerator.jpg" height="80" width="200"></a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Enter Team Name" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create Team</button>
+      </form>
+    </nav>
+    
+    <h1>STRIVE TEAM GENERATOR!</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-3 mt-4">
+          <div class="card" style="align-items: center;">
+            <img src="./Assets/random.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">PLAYERS</h5>
+              <p class="card-text">Enter name here to add players to the list.</p>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Player name" aria-label="Player name" aria-describedby="playersname">
+                <div class="input-group-append">
+                </div>
+              </div> 
+              <a href="#" class="btn btn-primary">Add Player</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 mt-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">List of Players</h5>
+            <p class="card-text">Names of players will be listed here.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3 mt-4">
+        <div class="card">
+          <img src="./Assets/teamgenerator.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Team 1</h5>
+            <p class="card-text">Names of players will be listed here.</p>
+            <p class="card-text">
+              <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ol></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-3 mt-4">
+        <div class="card">
+          <img src="./Assets/teamgenerator.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Team 2</h5>
+            <p class="card-text">Names of players will be listed here.</p>
+            <p class="card-text"><ol>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol></p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <section>
+
+    <div class="container">
+      <div class="box pt-4">
+
+      </div>
+    </div>
+  </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!--
+    WELCOME TO THE STRIVE TEAM GENERATOR!
+
+    In this app you will generate teams and assign the participants to them.
+    You will use the Bootstrap components for the elements of your app.
+
+    The features are the following:
+    - The user should be able to add a list of names, find a way to get the user input and fill a list with the new name.
+    - The user should be able to set the number of teams he wants, so that they will be generated. A team is just another list to be displayed.
+    - An "Assign" button will be required in order to launch the team generation functionality.
+    - Every time the user clicks on the "Assign" button, a random name is placed in a team and removed from the initial list.
+    - Each team should be inside a "column" to be responsive.
+    - [EXTRA] Create a button to remove a user from a team, and putting him back in the main list, waiting to be reassigned.
+    - [EXTRA] Create a button to reset the state of the app.
+-->
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
